@@ -2,13 +2,12 @@
 #include <stdlib.h>
 #include <math.h>
 
-// 1 - Construa um algoritmo que mostre a mensagem "Alo mundo" na tela.
+//1 - Construa um algoritmo que mostre a mensagem "Alo mundo" na tela.
 void question1() {
   printf("Alo mundo");
 }
 
-// 2 -  Construa um que peC'a um nC:mero e entC#o mostre a mensagem bO nC:mero informado foi  [nC:mero]b
-
+//2 -  Construa um que peC'a um nC:mero e entC#o mostre a mensagem bO nC:mero informado foi  [nC:mero]b
 void question2() {
   int num1;
   scanf("%i", &num1);
@@ -16,7 +15,6 @@ void question2() {
 }
 
 //3 - Construa um algoritmo que calcule a C!rea de um circulo.
-
 void question3() {
   float radius;
   printf("Type the radius of a circle: ");
@@ -98,7 +96,56 @@ void question10() {
     
 }
 
+
+//11 - Construa um algoritmo que peça a temperatura em graus Farenheit(ºF), transforme e mostre na tela a temperatura em graus Celsius(ºC). C=5*(F-32)/9} 
+void question11() {
+    float celsius, farenheit;
+    printf("Type a temperature in Farenheit: ");
+    scanf("%f", &farenheit);
+    celsius = 5*(farenheit-32)/9;
+    printf("The temperature converted to Celsius is: %f", celsius);
+    
+}
+ 
+
+//12 - Construa um algoritmo que peça uma temperatura em graus Celsius(ºC), transforme e mostre na tela a temperatura em graus Farenheit(ºF). 
+void question12() {
+    float celsius, farenheit;
+    printf("Type a temperature in Celsius: ");
+    scanf("%f", &celsius);
+    farenheit = (celsius * 9 / 5) + 32;
+    printf("The temperature converted to Farenheit is: %f", farenheit);
+    
+}
+ 
+
+//13 - Construa um algoritmo que peça 2 números inteiros e um número real. Calcule e mostre: 
+// a) o produto do dobro do primeiro com metade do segundo. 
+// b) a soma do triplo do primeiro com o terceiro. 
+// c) o terceiro elevado ao cubo. 
+void question13() {
+    int first, second;
+    float third;
+    printf("Type the first number (int): ");
+    scanf("%i", &first);
+    printf("Type the second number (int): ");
+    scanf("%i", &second);
+    printf("Type the third number (float): ");
+    scanf("%f", &third);
+    
+    printf("The product of the first twice with the second half is: %f", (2 * first) * (second / 2));
+}
+
+
+//14 - Uma determinada empresa vende uma máquina que possui seis motores. Um de 20 CV, dois de 1 CV, e três de 5 CV, que custam 1500, 300 e 600 reais respectivamente cada motor. Existe a necessidade de saber quantos motores deverão ser comprados de cada modelo e quanto custará esta compra. Para isto elabore um programa que:  
+//a) Pergunte quantas máquinas serão vendidas;  
+//b) Calcule e apresente na tela a quantidade de motores que deverão ser comprados de cada modelo;  
+//c) Calcule e apresente na tela o custo total por máquina, o custo por tipo de motor e o custo total da compra. 
+
+ 
+//15 - Elabore um programa para calcular a quantidade necessária de latas de tinta para pintar uma parede com X metros de largura por H metros de altura. Considere que o consumo de latas de tinta por metro quadrado é 3 litros e a quantidade de tinta por lata é 3,6 litros. 
+
 int main(void) {
-    question10();
+    question13();
     return 0;
 }
