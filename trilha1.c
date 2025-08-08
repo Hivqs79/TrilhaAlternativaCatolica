@@ -1,11 +1,3 @@
-/******************************************************************************
-
-Welcome to GDB Online.
-GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
-C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
-Code, Compile, Run and Debug online from anywhere in world.
-
-*******************************************************************************/
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -19,8 +11,8 @@ void question1() {
 
 void question2() {
   int num1;
-  scanf("%d", &num1);
-  printf("O numero informado foi %d", num1);
+  scanf("%i", &num1);
+  printf("O numero informado foi %i", num1);
 }
 
 //3 - Construa um algoritmo que calcule a C!rea de um circulo.
@@ -48,6 +40,65 @@ void question5() {
   printf("The number rounded to two decimal places is %.2f", floatNumber);
 }
 
-void main() {
-  question5();
+//6 - Construa um algoritmo que calcule a área de um quadrado, em seguida mostre o dobro desta área para o usuário. 
+void question6() {
+    float side;
+    printf("Type the side of a square: ");
+    scanf("%f", &side);
+    float area = side*side;
+    printf("The twice of the square area is: %f", 2 * area);
+}
+ 
+
+//7 - Construa um algoritmo que peça dois números, calcule e mostre a soma dos mesmos  
+void question7() {
+    float num1;
+    float num2;
+    printf("Type a number: ");
+    scanf("%f", &num1);
+    printf("Type another number: ");
+    scanf("%f", &num2);
+    printf("The sum of the two numbers is: %f", num1 + num2);
+}
+ 
+
+//8 - Construa um algoritmo que peça as 4 notas bimestrais e mostre a média, com uma casa decimal 
+void question8() {
+    float sum = 0;
+    int quantNotes = 4;
+    for (int i = 1; i <= quantNotes; i++) {
+        float note;
+        printf("Type the %i° note: ", i);
+        scanf("%f", &note);
+        sum += note;
+    }
+    printf("The average of the notes is: %.1f", sum / quantNotes);
+}
+ 
+
+//9 - Construa um algoritmo que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês. Calcule e mostre o total do seu salário no referido mês. 
+void question9() {
+    float hourGain;
+    float monthHours;
+    printf("Type how many you gain by hour: ");
+    scanf("%f", &hourGain);
+    printf("Type how many hours do you work by month: ");
+    scanf("%f", &monthHours);
+    printf("You won %2.f by month", hourGain * monthHours);
+}
+ 
+
+//10 - Uma firma contrata um encanador a 25,00 por dia. Crie um programa que solicite o número de dias trabalhados pelo encanador e imprima a quantia líquida que deverá ser paga, sabendo-se que são descontados 8% para o Imposto de Renda. 
+void question10() {
+    float workDayGain = 25;
+    int daysWorked;
+    printf("Type the quantity of days worked: ");
+    scanf("%i", &daysWorked);
+    printf("The net pay of the worker is: %f", (workDayGain * daysWorked) * 0.92 );
+    
+}
+
+int main(void) {
+    question10();
+    return 0;
 }
